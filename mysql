@@ -1,0 +1,17 @@
+mysql -u root -p
+password:mysql
+CREATE USER todo IDENTIFIED BY #cfy5330268;//创建用户
+SHOW GRANTS FOR todo@localhost;
+CREATE DATABASE todo;//创建数据库
+grant all on todo to 'todo'@'%'//赋予权限
+use todo;
+CREATE TABLE user 
+(
+    id BIGINT,
+    name varchar(255)
+);
+insert todo(id,name)
+values(1,"cfy");
+DELETE FROM todo.todo
+WHERE id=1;
+\q
